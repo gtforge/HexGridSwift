@@ -2,7 +2,7 @@
 ** Basics
 Configurable hex grid on abstract surface.
 ** Examples
-#+BGIN_SRC swift
+#+BEGIN_SRC swift
 import MortonSwift
 import HexGridSwift
 
