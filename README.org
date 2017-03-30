@@ -1,0 +1,16 @@
+* HexGrid
+** Basics
+Configurable hex grid on abstract surface.
+** Examples
+#+BGIN_SRC swift
+import MortonSwift
+import HexGridSwift
+
+let center: Point = Point(x: 0.0, y: 0.0)
+let size: Point = Point(x: 20.0, y: 10.0)
+let grid: Grid = Grid(OrientationFlat, center: center, size: size, mort: Morton64(dimensions: 2, bits: 32))
+let hex: Hex = grid.hexAt(Point(x: 50.0, y: 50.0))
+let code: Int64 = grid.hexToCode(hex: hex)
+let restoredHex: Hex = grid.hexFromCode(code: code)
+let neighbors: [Hex] = grid.hexNeighbors(hex: hex, layers: 2)
+#+END_SRC
