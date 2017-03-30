@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:HexGridSwift.xcodeproj">
+      location = "container:HexGrid.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
@@ -11,6 +11,6 @@
       location = "group:Carthage/Checkouts/Quick/Quick.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Carthage/Checkouts/MortonSwift/MortonSwift.xcodeproj">
+      location = "group:Carthage/Checkouts/MortonSwift/Morton.xcodeproj">
    </FileRef>
 </Workspace>

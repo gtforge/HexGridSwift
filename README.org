@@ -3,8 +3,8 @@
 Configurable hex grid on abstract surface.
 ** Examples
 #+BEGIN_SRC swift
-import MortonSwift
-import HexGridSwift
+import Morton
+import HexGrid
 
 let center: Point = Point(x: 0.0, y: 0.0)
 let size: Point = Point(x: 20.0, y: 10.0)

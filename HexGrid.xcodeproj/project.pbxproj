@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D9CF3BD31E8BEDCC0011D3B2 /* MortonSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CF3BD21E8BEDCC0011D3B2 /* MortonSwift.framework */; };
-		F96F6BFA1E841454006CD6C1 /* HexGridSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F6BF01E841454006CD6C1 /* HexGridSwift.framework */; };
+		D9CF3BD31E8BEDCC0011D3B2 /* Morton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CF3BD21E8BEDCC0011D3B2 /* Morton.framework */; };
+		F96F6BFA1E841454006CD6C1 /* HexGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F6BF01E841454006CD6C1 /* HexGrid.framework */; };
 		F96F6BFF1E841454006CD6C1 /* HexGridSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96F6BFE1E841454006CD6C1 /* HexGridSpec.swift */; };
 		F9AF18C11E8415EF00802C23 /* HexGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AF18C01E8415EF00802C23 /* HexGrid.swift */; };
 		F9AF18C51E84165200802C23 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AF18C31E84165200802C23 /* Nimble.framework */; };
@@ -21,15 +21,15 @@
 			containerPortal = F96F6BE71E841454006CD6C1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F96F6BEF1E841454006CD6C1;
-			remoteInfo = HexGridSwift;
+			remoteInfo = HexGrid;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D9CF3BD21E8BEDCC0011D3B2 /* MortonSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MortonSwift.framework; path = "Carthage/Checkouts/MortonSwift/build/Debug-iphoneos/MortonSwift.framework"; sourceTree = "<group>"; };
-		F96F6BF01E841454006CD6C1 /* HexGridSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexGridSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9CF3BD21E8BEDCC0011D3B2 /* Morton.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Morton.framework; path = "Carthage/Checkouts/MortonSwift/build/Debug-iphoneos/Morton.framework"; sourceTree = "<group>"; };
+		F96F6BF01E841454006CD6C1 /* HexGrid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HexGrid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96F6BF41E841454006CD6C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F96F6BF91E841454006CD6C1 /* HexGridSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexGridSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F96F6BF91E841454006CD6C1 /* HexGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F96F6BFE1E841454006CD6C1 /* HexGridSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexGridSpec.swift; sourceTree = "<group>"; };
 		F96F6C001E841454006CD6C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9AF18C01E8415EF00802C23 /* HexGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexGrid.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9CF3BD31E8BEDCC0011D3B2 /* MortonSwift.framework in Frameworks */,
+				D9CF3BD31E8BEDCC0011D3B2 /* Morton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +52,7 @@
 			files = (
 				F9AF18C51E84165200802C23 /* Nimble.framework in Frameworks */,
 				F9AF18C61E84165200802C23 /* Quick.framework in Frameworks */,
-				F96F6BFA1E841454006CD6C1 /* HexGridSwift.framework in Frameworks */,
+				F96F6BFA1E841454006CD6C1 /* HexGrid.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +62,8 @@
 		F96F6BE61E841454006CD6C1 = {
 			isa = PBXGroup;
 			children = (
-				F96F6BF21E841454006CD6C1 /* HexGridSwift */,
-				F96F6BFD1E841454006CD6C1 /* HexGridSwiftTests */,
+				F96F6BF21E841454006CD6C1 /* HexGrid */,
+				F96F6BFD1E841454006CD6C1 /* HexGridTests */,
 				F96F6BF11E841454006CD6C1 /* Products */,
 				F9AF18C21E84165200802C23 /* Frameworks */,
 			);
@@ -72,34 +72,34 @@
 		F96F6BF11E841454006CD6C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F96F6BF01E841454006CD6C1 /* HexGridSwift.framework */,
-				F96F6BF91E841454006CD6C1 /* HexGridSwiftTests.xctest */,
+				F96F6BF01E841454006CD6C1 /* HexGrid.framework */,
+				F96F6BF91E841454006CD6C1 /* HexGridTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F96F6BF21E841454006CD6C1 /* HexGridSwift */ = {
+		F96F6BF21E841454006CD6C1 /* HexGrid */ = {
 			isa = PBXGroup;
 			children = (
 				F9AF18C01E8415EF00802C23 /* HexGrid.swift */,
 				F96F6BF41E841454006CD6C1 /* Info.plist */,
 			);
-			path = HexGridSwift;
+			path = HexGrid;
 			sourceTree = "<group>";
 		};
-		F96F6BFD1E841454006CD6C1 /* HexGridSwiftTests */ = {
+		F96F6BFD1E841454006CD6C1 /* HexGridTests */ = {
 			isa = PBXGroup;
 			children = (
 				F96F6BFE1E841454006CD6C1 /* HexGridSpec.swift */,
 				F96F6C001E841454006CD6C1 /* Info.plist */,
 			);
-			path = HexGridSwiftTests;
+			path = HexGridTests;
 			sourceTree = "<group>";
 		};
 		F9AF18C21E84165200802C23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D9CF3BD21E8BEDCC0011D3B2 /* MortonSwift.framework */,
+				D9CF3BD21E8BEDCC0011D3B2 /* Morton.framework */,
 				F9AF18C31E84165200802C23 /* Nimble.framework */,
 				F9AF18C41E84165200802C23 /* Quick.framework */,
 			);
@@ -119,9 +119,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F96F6BEF1E841454006CD6C1 /* HexGridSwift */ = {
+		F96F6BEF1E841454006CD6C1 /* HexGrid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F96F6C041E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGridSwift" */;
+			buildConfigurationList = F96F6C041E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGrid" */;
 			buildPhases = (
 				F96F6BEB1E841454006CD6C1 /* Sources */,
 				F96F6BEC1E841454006CD6C1 /* Frameworks */,
@@ -132,14 +132,14 @@
 			);
 			dependencies = (
 			);
-			name = HexGridSwift;
-			productName = HexGridSwift;
-			productReference = F96F6BF01E841454006CD6C1 /* HexGridSwift.framework */;
+			name = HexGrid;
+			productName = HexGrid;
+			productReference = F96F6BF01E841454006CD6C1 /* HexGrid.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F96F6BF81E841454006CD6C1 /* HexGridSwiftTests */ = {
+		F96F6BF81E841454006CD6C1 /* HexGridTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F96F6C071E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGridSwiftTests" */;
+			buildConfigurationList = F96F6C071E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGridTests" */;
 			buildPhases = (
 				F96F6BF51E841454006CD6C1 /* Sources */,
 				F96F6BF61E841454006CD6C1 /* Frameworks */,
@@ -150,9 +150,9 @@
 			dependencies = (
 				F96F6BFC1E841454006CD6C1 /* PBXTargetDependency */,
 			);
-			name = HexGridSwiftTests;
-			productName = HexGridSwiftTests;
-			productReference = F96F6BF91E841454006CD6C1 /* HexGridSwiftTests.xctest */;
+			name = HexGridTests;
+			productName = HexGridTests;
+			productReference = F96F6BF91E841454006CD6C1 /* HexGridTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F96F6BEA1E841454006CD6C1 /* Build configuration list for PBXProject "HexGridSwift" */;
+			buildConfigurationList = F96F6BEA1E841454006CD6C1 /* Build configuration list for PBXProject "HexGrid" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -188,8 +188,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F96F6BEF1E841454006CD6C1 /* HexGridSwift */,
-				F96F6BF81E841454006CD6C1 /* HexGridSwiftTests */,
+				F96F6BEF1E841454006CD6C1 /* HexGrid */,
+				F96F6BF81E841454006CD6C1 /* HexGridTests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,7 +233,7 @@
 /* Begin PBXTargetDependency section */
 		F96F6BFC1E841454006CD6C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F96F6BEF1E841454006CD6C1 /* HexGridSwift */;
+			target = F96F6BEF1E841454006CD6C1 /* HexGrid */;
 			targetProxy = F96F6BFB1E841454006CD6C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -347,15 +347,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/MortonSwift/build/Debug-iphoneos",
-				);
-				INFOPLIST_FILE = HexGridSwift/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HexGrid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGridSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -372,15 +369,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Checkouts/MortonSwift/build/Debug-iphoneos",
-				);
-				INFOPLIST_FILE = HexGridSwift/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = HexGrid/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGridSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 2.3;
@@ -392,10 +386,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HexGridSwiftTests/Info.plist;
+				INFOPLIST_FILE = HexGridTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGridSwiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGridTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -406,10 +400,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = HexGridSwiftTests/Info.plist;
+				INFOPLIST_FILE = HexGridTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGridSwiftTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gojuno.HexGridTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 			};
@@ -418,7 +412,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F96F6BEA1E841454006CD6C1 /* Build configuration list for PBXProject "HexGridSwift" */ = {
+		F96F6BEA1E841454006CD6C1 /* Build configuration list for PBXProject "HexGrid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F96F6C021E841454006CD6C1 /* Debug */,
@@ -427,7 +421,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F96F6C041E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGridSwift" */ = {
+		F96F6C041E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGrid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F96F6C051E841454006CD6C1 /* Debug */,
@@ -436,7 +430,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F96F6C071E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGridSwiftTests" */ = {
+		F96F6C071E841454006CD6C1 /* Build configuration list for PBXNativeTarget "HexGridTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F96F6C081E841454006CD6C1 /* Debug */,

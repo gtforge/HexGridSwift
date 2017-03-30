@@ -3,8 +3,8 @@ import Foundation
 import Quick
 import Nimble
 
-import MortonSwift
-import HexGridSwift
+import Morton
+import HexGrid
 
 final class HexGridSpec: QuickSpec {
     override func spec() {

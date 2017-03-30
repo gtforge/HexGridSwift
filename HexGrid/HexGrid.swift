@@ -1,5 +1,6 @@
 import Foundation
-import MortonSwift
+
+import Morton
 
 // TODO: port region functionality
 

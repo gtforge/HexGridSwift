@@ -17,9 +17,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F96F6BF81E841454006CD6C1"
-               BuildableName = "HexGridSwiftTests.xctest"
-               BlueprintName = "HexGridSwiftTests"
-               ReferencedContainer = "container:HexGridSwift.xcodeproj">
+               BuildableName = "HexGridTests.xctest"
+               BlueprintName = "HexGridTests"
+               ReferencedContainer = "container:HexGrid.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
