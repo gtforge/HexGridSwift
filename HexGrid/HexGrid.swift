@@ -4,8 +4,6 @@ import Morton
 
 // TODO: port region functionality
 
-private let PI: Double = 3.1415926535897931
-
 public struct Point {
     public let x: Double
     public let y: Double
@@ -66,7 +64,7 @@ public struct Orientation {
         var cosines: [Double] = []
         var i: Int = 0
         while i < 6 {
-            let angle = 2.0 * PI * (Double(i) + startAngle) / 6.0
+            let angle = 2.0 * M_PI * (Double(i) + startAngle) / 6.0
             sines.append(sin(angle))
             cosines.append(cos(angle))
             i += 1
