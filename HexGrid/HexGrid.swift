@@ -6,7 +6,7 @@ import Morton
 
 private let PI: Double = 3.1415926535897931
 
-public class Point {
+public struct Point {
     public let x: Double
     public let y: Double
 
@@ -16,7 +16,7 @@ public class Point {
     }
 }
 
-public class Hex {
+public struct Hex {
     public let q: Int64
     public let r: Int64
 
@@ -26,7 +26,7 @@ public class Hex {
     }
 }
 
-public class FractionalHex {
+public struct FractionalHex {
     public let q: Double
     public let r: Double
 
@@ -37,57 +37,59 @@ public class FractionalHex {
 
     public func toHex() -> Hex {
         let s = -(q + r)
-        var rq: Double = round(q)
-        var rr: Double = round(r)
-        let rs: Double = round(s)
-        let qDiff: Double = abs(rq - q)
-        let rDiff: Double = abs(rr - r)
-        let sDiff: Double = abs(rs - s)
+        var rq = round(q)
+        var rr = round(r)
+        let rs = round(s)
+        let qDiff = abs(rq - q)
+        let rDiff = abs(rr - r)
+        let sDiff = abs(rs - s)
 
         if qDiff > rDiff && qDiff > sDiff {
-                rq = -(rr + rs)
+            rq = -(rr + rs)
         } else if rDiff > sDiff {
-                rr = -(rq + rs)
+            rr = -(rq + rs)
         }
 
         return Hex(q: Int64(rq), r: Int64(rr))
     }
 }
 
-public class Orientation {
+public struct Orientation {
     let f: [Double]
     let b: [Double]
     let startAngle: Double
-    let sinuses: [Double]
-    let cosinuses: [Double]
+    let sines: [Double]
+    let cosines: [Double]
 
     public init(f: [Double], b: [Double], startAngle: Double) {
-        var sinuses: [Double] = []
-        var cosinuses: [Double] = []
+        var sines: [Double] = []
+        var cosines: [Double] = []
         var i: Int = 0
         while i < 6 {
             let angle = 2.0 * PI * (Double(i) + startAngle) / 6.0
-            sinuses.append(sin(angle))
-            cosinuses.append(cos(angle))
+            sines.append(sin(angle))
+            cosines.append(cos(angle))
             i += 1
         }
         self.f = f
         self.b = b
         self.startAngle = startAngle
-        self.sinuses = sinuses
-        self.cosinuses = cosinuses
+        self.sines = sines
+        self.cosines = cosines
     }
 }
 
-public let OrientationPointy: Orientation = Orientation(
-  f: [sqrt(3.0), sqrt(3.0) / 2.0, 0.0, 3.0 / 2.0],
-  b: [sqrt(3.0) / 3.0, -1.0 / 3.0, 0.0, 2.0 / 3.0],
-  startAngle: 0.5)
+public let OrientationPointy = Orientation(
+    f: [sqrt(3.0), sqrt(3.0) / 2.0, 0.0, 3.0 / 2.0],
+    b: [sqrt(3.0) / 3.0, -1.0 / 3.0, 0.0, 2.0 / 3.0],
+    startAngle: 0.5
+)
 
-public let OrientationFlat: Orientation = Orientation(
-  f: [3.0 / 2.0, 0.0, sqrt(3.0) / 2.0, sqrt(3.0)],
-  b: [2.0 / 3.0, 0.0, -1.0 / 3.0, sqrt(3.0) / 3.0],
-  startAngle: 0.0)
+public let OrientationFlat = Orientation(
+    f: [3.0 / 2.0, 0.0, sqrt(3.0) / 2.0, sqrt(3.0)],
+    b: [2.0 / 3.0, 0.0, -1.0 / 3.0, sqrt(3.0) / 3.0],
+    startAngle: 0.0
+)
 
 public class Grid {
     let orientation: Orientation
@@ -128,7 +130,7 @@ public class Grid {
     public func hexCorners(hex: Hex) -> [Point] {
         let center: Point = hexCenter(hex)
         return (0..<6).map {
-            (i: Int) in Point(x: size.x * orientation.cosinuses[i] + center.x, y: size.y * orientation.sinuses[i] + center.y)
+            Point(x: size.x * orientation.cosines[$0] + center.x, y: size.y * orientation.sines[$0] + center.y)
         }
     }
 
