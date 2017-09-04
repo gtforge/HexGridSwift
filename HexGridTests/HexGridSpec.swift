@@ -8,7 +8,7 @@ import HexGrid
 
 final class HexGridSpec: QuickSpec {
     override func spec() {
-        func doTestHexAtPoint(grid: Grid, expected: Hex, point: Point) {
+        func doTestHexAtPoint(_ grid: Grid, expected: Hex, point: Point) {
             it("should create proper hex at \(point)") {
                 let created = grid.hexAt(point)
                 expect(created.q).to(equal(expected.q))
@@ -16,7 +16,7 @@ final class HexGridSpec: QuickSpec {
             }
         }
 
-        func doComparePoints(expected: Point, got: Point, precision: Double) {
+        func doComparePoints(_ expected: Point, got: Point, precision: Double) {
             it("should create close enough points") {
                 expect(got.x).to(beCloseTo(expected.x, within: precision))
                 expect(got.y).to(beCloseTo(expected.y, within: precision))

@@ -64,7 +64,7 @@ public struct Orientation {
         var cosines: [Double] = []
         var i: Int = 0
         while i < 6 {
-            let angle = 2.0 * M_PI * (Double(i) + startAngle) / 6.0
+            let angle = 2.0 * .pi * (Double(i) + startAngle) / 6.0
             sines.append(sin(angle))
             cosines.append(cos(angle))
             i += 1
@@ -89,7 +89,7 @@ public let OrientationFlat = Orientation(
     startAngle: 0.0
 )
 
-public class Grid {
+open class Grid {
     let orientation: Orientation
     let origin: Point
     let size: Point
@@ -102,16 +102,16 @@ public class Grid {
         self.mort = mort
     }
 
-    public func hexToCode(hex: Hex) throws -> Int64 {
+    open func hexToCode(_ hex: Hex) throws -> Int64 {
         return try mort.sPack([hex.q, hex.r])
     }
 
-    public func hexFromCode(code: Int64) -> Hex {
+    open func hexFromCode(_ code: Int64) -> Hex {
         let qr: [Int64] = mort.sUnpack(code)
         return Hex(q: qr[0], r: qr[1])
     }
 
-    public func hexAt(point: Point) -> Hex {
+    open func hexAt(_ point: Point) -> Hex {
         let x: Double = (point.x - origin.x) / size.x
         let y: Double = (point.y - origin.y) / size.y
         let q: Double = orientation.b[0] * x + orientation.b[1] * y
@@ -119,20 +119,20 @@ public class Grid {
         return FractionalHex(q: q, r: r).toHex()
     }
 
-    public func hexCenter(hex: Hex) -> Point {
+    open func hexCenter(_ hex: Hex) -> Point {
         let x: Double = (orientation.f[0] * Double(hex.q) + orientation.f[1] * Double(hex.r)) * size.x + origin.x
         let y: Double = (orientation.f[2] * Double(hex.q) + orientation.f[3] * Double(hex.r)) * size.y + origin.y
         return Point(x: x, y: y)
     }
 
-    public func hexCorners(hex: Hex) -> [Point] {
+    open func hexCorners(_ hex: Hex) -> [Point] {
         let center: Point = hexCenter(hex)
         return (0..<6).map {
             Point(x: size.x * orientation.cosines[$0] + center.x, y: size.y * orientation.sines[$0] + center.y)
         }
     }
 
-    public func hexNeighbors(hex: Hex, layers: Int64) -> [Hex] {
+    open func hexNeighbors(_ hex: Hex, layers: Int64) -> [Hex] {
         var neighbors: [Hex] = []
         var q: Int64 = -layers
         while q <= layers {
