@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HexGrid"
-  s.version      = "2.0.2"
+  s.version      = "2.0.3"
   s.platform     = :ios, "9.0"
   s.summary      = "HexGridSwift."
   s.homepage     = "https://github.com/gtforge/HexGridSwift"
@@ -18,5 +18,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/gtforge/HexGridSwift.git" }
   s.source_files  = "HexGrid/*"
   s.dependency 'Morton'
+
 
 end
