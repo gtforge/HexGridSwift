@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B361B15021490EB200206086 /* Info.plist in Headers */ = {isa = PBXBuildFile; fileRef = F96F6BF41E841454006CD6C1 /* Info.plist */; };
 		D9CF3BD31E8BEDCC0011D3B2 /* Morton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CF3BD21E8BEDCC0011D3B2 /* Morton.framework */; };
 		F96F6BFA1E841454006CD6C1 /* HexGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F96F6BF01E841454006CD6C1 /* HexGrid.framework */; };
 		F96F6BFF1E841454006CD6C1 /* HexGridSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96F6BFE1E841454006CD6C1 /* HexGridSpec.swift */; };
@@ -113,6 +114,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B361B15021490EB200206086 /* Info.plist in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
